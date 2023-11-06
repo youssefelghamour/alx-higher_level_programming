@@ -5,7 +5,7 @@
  *
  * @head_ref: A pointer to the head of the second half
  */
-void reverse(listint_t **head_ref)
+void reverse_list(listint_t **head_ref)
 {
 	listint_t *prev = NULL;
 	listint_t *current = *head_ref;
@@ -30,7 +30,7 @@ void reverse(listint_t **head_ref)
  *
  * Return: 1 if they're identical, 0 if not
  */
-int compare(listint_t *first_half, listint_t *second_half)
+int compare_elements(listint_t *first_half, listint_t *second_half)
 {
 	listint_t *temp1 = first_half;
 	listint_t *temp2 = second_half;
@@ -90,8 +90,8 @@ int is_palindrome(listint_t **head)
 
 		second_half = slow;
 		prev_slow->next = NULL;
-		reverse(&second_half);
-		is_palindrome = compare(*head, second_half);
+		reverse_list(&second_half);
+		is_palindrome = compare_elements(*head, second_half);
 
 		if (mid_point != NULL)
 		{
