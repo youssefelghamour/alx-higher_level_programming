@@ -6,6 +6,8 @@ using backtracking
 
 """
 
+import sys
+
 
 def isSafe(m_queen, nqueen):
     """ Method that determines if the queens can or can't kill each other
@@ -87,9 +89,6 @@ def solveNQueen(size):
 
 
 if __name__ == '__main__':
-
-    import sys
-
     if len(sys.argv) == 1 or len(sys.argv) > 2:
         print("Usage: nqueens N")
         sys.exit(1)
