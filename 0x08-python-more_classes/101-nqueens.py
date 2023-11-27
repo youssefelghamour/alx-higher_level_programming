@@ -59,7 +59,7 @@ def Queen(m_queen, nqueen):
 
     """
 
-    if nqueen is len(m_queen):
+    if nqueen == len(m_queen):
         print_result(m_queen, nqueen)
         return
 
@@ -71,7 +71,7 @@ def Queen(m_queen, nqueen):
 
         if isSafe(m_queen, nqueen) is True:
 
-            if nqueen is not len(m_queen):
+            if nqueen != len(m_queen):
                 Queen(m_queen, nqueen + 1)
 
 
