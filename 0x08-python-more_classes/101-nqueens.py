@@ -15,7 +15,7 @@ def init_board(n):
 def board_copy(board):
     """Return a deepcopy of the chessboard"""
     if isinstance(board, list):
-        return list(map(board_deepcopy, board))
+        return list(map(board_copy, board))
     return board
 
 
@@ -25,12 +25,12 @@ def get_solution(board):
     for row in range(len(board)):
         for column in range(len(board)):
             if board[row][column] == "Q":
-                result.append([row, column])
+                solution.append([row, column])
                 break
     return solution
 
 
-def x_out(board, row, col):
+def xout(board, row, col):
     """X out spots on a chessboard.
         All spots where non-attacking queens can no
         longer be played are X-ed out.
@@ -63,7 +63,7 @@ def x_out(board, row, col):
     for r in range(row - 1, -1, -1):
         if c < 0:
             break
-        board[r][c]
+        board[r][c] = "x"
         c -= 1
     # X out all spots diagonally up to the right
     c = col + 1
@@ -97,7 +97,7 @@ def recursive_solve(board, row, queens, solutions):
 
     for c in range(len(board)):
         if board[row][c] == " ":
-            tmp_board = board_deepcopy(board)
+            tmp_board = board_copy(board)
             tmp_board[row][c] = "Q"
             xout(tmp_board, row, c)
             solutions = recursive_solve(tmp_board, row + 1,
