@@ -1,11 +1,14 @@
+#!/usr/bin/python3
 """ Module containing lookup method """
 
+
 def lookup(obj):
-    """ Method that returns the list of available attributes and methods of an object
-    
+    """ Method that returns the list of available attributes and methods
+        of an object
+
     Args:
         obj: object
-    
+
     Returns:
         the list of available attributes and methods of the object
     """
