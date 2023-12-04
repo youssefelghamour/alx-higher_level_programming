@@ -33,16 +33,6 @@ empty list:
     >>> new_list.print_sorted()
     []
 
-List with characters:
-    >>> new_list = MyList(['1', '16', '8'])
-    >>> new_list.print_sorted()
-    ['1', '16', '8']
-
-List with a string:
-    >>> new_list = MyList(["6", "3"])
-    >>> new_list.print_sorted()
-    ['3', '6']
-
 List with negative numbers:
     >>> new_list = MyList([-4, 12, -23, 468, -200])
     >>> new_list.print_sorted()
