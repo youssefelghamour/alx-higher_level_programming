@@ -8,7 +8,6 @@ def read_file(filename=""):
     Args:
         filename: name of the file
     """
-    file = open(filename, 'r', encoding="utf-8")
-    data = file.read()
-    print(data.strip())
-    file.close()
+    with open(filename, 'r', encoding="utf-8") as file:
+        data = file.read()
+        print(data.strip())
