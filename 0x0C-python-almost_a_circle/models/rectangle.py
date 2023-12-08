@@ -77,7 +77,9 @@ class Rectangle(Base):
 
     def display(self):
         """ Prints the Rectangle instance with the character # """
-        rectangle = ("#" * self.width + '\n') * self.height
+        y_axis = self.y * '\n'
+        x_axis = self.x * ' '
+        rectangle = y_axis + (x_axis + "#" * self.width + '\n') * self.height
         print(rectangle[:-1])
 
     def __str__(self):
