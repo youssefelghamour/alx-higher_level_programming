@@ -15,5 +15,3 @@ This project is part of the Higher Level curriculum and serves as a preparation 
 - `models/base.py`: Contains the base class with methods for JSON representation and instantiation.
 - `models/rectangle.py`: Implements a Rectangle class with various functionalities.
 - `models/square.py`: Inherits from Rectangle, representing a Square.
-
-## Tasks
