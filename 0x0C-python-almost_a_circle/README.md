@@ -4,13 +4,11 @@ This project is part of the Higher Level curriculum and serves as a preparation 
 
 ## Learning Objectives
 
-By completing this project, you will be able to:
-
-- Implement unit testing in a large project
-- Serialize and deserialize a class
-- Read and write JSON files
-- Understand and use *args and **kwargs
-- Handle named arguments in a function
+- Implementing unit testing in a large project
+- Serializing and deserializing a class
+- Reading and writing JSON files
+- Understanding and using *args and **kwargs
+- Handling named arguments in a function
 
 ## Project Structure
 
