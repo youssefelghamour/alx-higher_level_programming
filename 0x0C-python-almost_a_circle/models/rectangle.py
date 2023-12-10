@@ -89,3 +89,31 @@ class Rectangle(Base):
         str3 = "{}/{} - ".format(self.x, self.y)
         str4 = "{}/{}".format(self.width, self.height)
         return str1 + str2 + str3 + str4
+
+    def update(self, *args, **kwargs):
+        """ Updates the value of the attributes """
+        list = []
+        for arg in args:
+            list.append(arg)
+        if len(list) > 0 and list[0] is not None:
+            self.id = list[0]
+        elif len(list) > 1 and list[1] is not None:
+            self.width = list[1]
+        elif len(list) > 2 and list[2] is not None:
+            self.height = list[2]
+        elif len(list) > 3 and list[3] is not None:
+            self.x = list[3]
+        elif len(list) > 4 and list[4] is not None:
+            self.y = list[4]
+        else:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                if key == "width":
+                    self.width = value
+                if key == "height":
+                    self.height = value
+                if key == "x":
+                    self.x = value
+                if key == "y":
+                    self.y = value
