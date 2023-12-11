@@ -20,13 +20,17 @@ class TestRectangleClass(unittest.TestCase):
 
     def test_init_with_negative_width(self):
         """ tests ValueError """
-        rect = Rectangle(-5, 10, 2, 3, 1)
-        self.assertRaises(ValueError)
+        with self.assertRaises(ValueError) as e:
+            rect = Rectangle(-5, 10, 2, 3, 1)
+        msg = "width must be > 0"
+        self.assertEqual(str(e.exception), msg)
 
     def test_init_with_non_integer_width(self):
         """ tests TypeError """
-        rect = Rectangle("5", 10, 2, 3, 1)
-        self.assertRaises(TypeError)
+        with self.assertRaises(TypeError) as e:
+            rect = Rectangle("5", 10, 2, 3, 1)
+        msg = "width must be an integer"
+        self.assertEqual(str(e.exception), msg)
 
     def test_area_calculation(self):
         """ test the area method """
