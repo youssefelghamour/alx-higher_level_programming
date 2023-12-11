@@ -2,6 +2,7 @@
 """ Module for Base class """
 import json
 import os
+import csv
 
 
 class Base:
@@ -70,3 +71,20 @@ class Base:
         lst = cls.from_json_string(json_string)
         lst = [cls.create(**lst[i]) for i in range(len(lst))]
         return lst
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ saves a list of object to a CSV file """
+        filename = "{}.csv".format(cls.__name__)
+
+        lst = []
+        if list_objs is not None:
+            for obj in list_objs:
+                if cls.__name__ == "Rectangle":
+                    lst.append([obj.id, obj.width, obj.height, obj.x, obj.y])
+                else:  # cls.__name__ == "Square"
+                    lst.append([obj.id, obj.size, obj.x, obj.y])
+
+        with open(filename, 'w', newline='', encoding="utf-8") as f:
+            writer = csv.writer(f)
+            writer.writerows(lst)
