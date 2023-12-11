@@ -93,18 +93,9 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """ Updates the value of the attributes """
         if args is not None and len(args) != 0:
-            list = []
-            for arg in args:
-                list.append(arg)
-            if len(list) > 0 and list[0] is not None:
-                self.id = list[0]
-            if len(list) > 1 and list[1] is not None:
-                self.width = list[1]
-                self.height = list[1]
-            if len(list) > 2 and list[2] is not None:
-                self.x = list[2]
-            if len(list) > 3 and list[3] is not None:
-                self.y = list[3]
+            lst = ['id', 'width', 'height', 'x', 'y']
+            for i in range(len(args)):
+                setattr(self, lst[i], args[i])
         else:
             for key, value in kwargs.items():
                 if key == "id":
