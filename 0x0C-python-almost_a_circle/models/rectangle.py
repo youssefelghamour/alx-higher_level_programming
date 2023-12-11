@@ -92,7 +92,7 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """ Updates the value of the attributes """
-        if args:
+        if args is not None and len(args) != 0:
             list = []
             for arg in args:
                 list.append(arg)
