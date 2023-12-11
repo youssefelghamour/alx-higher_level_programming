@@ -88,3 +88,28 @@ class Base:
         with open(filename, 'w', newline='', encoding="utf-8") as f:
             writer = csv.writer(f)
             writer.writerows(lst)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ loads and deserializes a CSV string from a CSV file """
+        filename = "{}.csv".format(cls.__name__)
+
+        if os.path.exists(filename) is False:
+            return []
+
+        list_objs = []
+        with open(filename, 'r', encoding="utf-8") as f:
+            reader = csv.reader(f)
+
+            attr = []
+            for row in reader:
+                for attribute in row:
+                    attr.append(int(attribute))
+                if cls.__name__ == "Rectangle":
+                    d = {"id": attr[0], "width": attr[1], "height": attr[2],
+                         "x": attr[3], "y": attr[4]}
+                else:  # cls.__name__ == "Square"
+                    d = {"id": attr[0], "size": attr[1],
+                         "x": attr[2], "y": attr[3]}
+                list_objs.append(cls.create(**d))
+        return list_objs
