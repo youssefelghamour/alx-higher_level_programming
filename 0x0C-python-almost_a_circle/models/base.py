@@ -34,3 +34,10 @@ class Base:
                 lst.append(obj.to_dictionary())
         with open("{}.json".format(cls.__name__), 'w', encoding="utf-8") as f:
             f.write(cls.to_json_string(lst))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ returns the list of the JSON string representation json_string """
+        if json_string is None or not json_string:
+            return []
+        return json.loads(json_string)
