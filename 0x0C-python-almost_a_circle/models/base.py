@@ -122,12 +122,11 @@ class Base:
         for obj in list_rectangles + list_squares:
             drawer = turtle.Turtle()
             drawer.color((randrange(255), randrange(255), randrange(255)))
-            drawer.pensize(1)
+            drawer.pensize(3)
             drawer.penup()
             drawer.goto(obj.x, obj.y)
             drawer.pendown()
             drawer.begin_fill()
-            drawer.pensize(10)
 
             for i in range(2):
                 drawer.forward(obj.width)
