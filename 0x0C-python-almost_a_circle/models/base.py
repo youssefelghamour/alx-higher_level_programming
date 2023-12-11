@@ -103,13 +103,12 @@ class Base:
 
             attr = []
             for row in reader:
-                for attribute in row:
-                    attr.append(int(attribute))
+                row = [int(r) for r in row]
                 if cls.__name__ == "Rectangle":
-                    d = {"id": attr[0], "width": attr[1], "height": attr[2],
-                         "x": attr[3], "y": attr[4]}
+                    d = {"id": row[0], "width": row[1], "height": row[2],
+                         "x": row[3], "y": row[4]}
                 else:  # cls.__name__ == "Square"
-                    d = {"id": attr[0], "size": attr[1],
-                         "x": attr[2], "y": attr[3]}
+                    d = {"id": row[0], "size": row[1],
+                         "x": row[2], "y": row[3]}
                 list_objs.append(cls.create(**d))
         return list_objs
