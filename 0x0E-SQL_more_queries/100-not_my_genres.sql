@@ -8,4 +8,3 @@ WHERE tv_genres.id NOT IN (
     JOIN tv_shows ON tv_show_genres.show_id = tv_shows.id AND tv_shows.title = 'Dexter'
 )
 ORDER BY tv_genres.name ASC;
-
