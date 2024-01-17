@@ -35,4 +35,4 @@ The 0x0E SQL - More Queries project is a hands-on learning experience focused on
 | 100-not_my_genres.sql                | Lists genres not linked to the show "Dexter".                                           |
 | 101-not_a_comedy.sql                 | Lists shows without the genre "Comedy".                                                 |
 | 102-rating_shows.sql                 | Lists shows from `hbtn_0d_tvshows_rate` by their rating.                                 |
-
+| `103-rating_genres.sql`     | Lists all genres in the database `hbtn_0d_tvshows_rate` by their rating.                |
