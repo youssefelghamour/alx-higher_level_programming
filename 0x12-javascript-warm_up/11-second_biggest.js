@@ -18,4 +18,3 @@ if (!max || (arg.length === 3)) {
   }
   console.log(secondMax);
 }
-
