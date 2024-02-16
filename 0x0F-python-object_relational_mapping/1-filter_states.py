@@ -19,6 +19,3 @@ if __name__ == '__main__':
 
     for row in result:
         print(row)
-
-    cursor.close()
-    connection.close()
