@@ -7,12 +7,10 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    payload = {'q': ""}
-
-    try:
-        payload = {'q': argv[1]}
-    except:
-        pass
+    if len(argv):
+        payload = {'q':  argv[1]}
+    else:
+        payload = {'q': ""}
 
     url = "http://0.0.0.0:5000/search_user"
 
@@ -24,5 +22,5 @@ if __name__ == "__main__":
             print("[{}] {}".format(body_json.get('id'), body_json.get('name')))
         else:
             print("No result")
-    except:
+    except TypeError:
         print("Not a valid JSON")
