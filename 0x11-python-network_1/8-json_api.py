@@ -15,7 +15,7 @@ if __name__ == "__main__":
         pass
 
     url = "http://0.0.0.0:5000/search_user"
-    
+
     r = requests.post(url, data=payload)
 
     try:
@@ -25,4 +25,4 @@ if __name__ == "__main__":
         else:
             print("No result")
     except:
-            print("Not a valid JSON")
+        print("Not a valid JSON")
