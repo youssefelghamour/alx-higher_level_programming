@@ -3,7 +3,6 @@
 const request = require('request');
 
 const apiUrl = process.argv[2];
-const characterUrl = 'https://swapi-api.alx-tools.com/api/people/18/';
 
 let count = 0;
 
