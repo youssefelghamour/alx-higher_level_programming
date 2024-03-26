@@ -13,7 +13,7 @@ request(apiUrl, function (error, response, body) {
 
     for (const film of filmsData) {
       for (const character of film.characters) {
-        if (character === characterUrl) {
+        if (character.endsWith('/18/')) {
           count++;
           break;
         }
