@@ -1,3 +1,2 @@
-$(document).ready(function() {
-    $("header").css("color", "#FF0000");
-});
+const $ = window.$;
+$('header').css('color', '#FF0000');
