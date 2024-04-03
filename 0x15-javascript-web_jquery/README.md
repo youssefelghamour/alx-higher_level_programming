@@ -11,7 +11,7 @@ This project consists of a collection of JavaScript scripts built with the jQuer
 | 2-script.js       | Update header text color to red on click of a div element.        |
 | 3-script.js       | Add class to header element on click of a div element.            |
 | 4-script.js       | Toggle class of header element on click of a div element.         |
-| 5-script.js       | Add <li> element to list on click of a div element.               |
+| 5-script.js       | Add li element to list on click of a div element.               |
 | 6-script.js       | Update header text to "New Header!!!" on click of a div element.  |
 | 7-script.js       | Fetch and display Star Wars character name.                       |
 | 8-script.js       | Fetch and display Star Wars movie titles.                         |
